@@ -1,0 +1,135 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: orangered;
+}
+
+li {
+  cursor: pointer;
+}
+
+.container {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  position: relative;
+}
+
+.container .title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  color: white;
+}
+
+.container .btn {
+  display: block;
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  background: inherit;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.container .btn--resultat {
+  background: white;
+  color: black;
+  width: 250px;
+}
+
+.container .btn:hover {
+  background: white;
+  color: orangered;
+  font-weight: 600;
+}
+
+.quiz {
+  width: auto;
+  height: auto;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  margin: auto;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quiz__item-question {
+  margin: 20px;
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.quiz__list-answer-obtion {
+  margin: 10px;
+  text-decoration: none !important;
+}
+
+.quiz__list-answer-obtion li {
+  font-size: 19px;
+  margin: 5px;
+  -webkit-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
+}
+
+.quiz__list-answer-obtion li:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.selected {
+  color: #1ff71f;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  opacity: .4;
+}
+
+.block_resultat {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.resultat {
+  width: 100%;
+  min-height: 300px;
+  border-collapse: collapse;
+  background: white;
+}
+
+.resultat td {
+  border: 3px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+/*# sourceMappingURL=style.css.map */

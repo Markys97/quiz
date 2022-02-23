@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">choose the right answer</h1>
+        <div class="quiz">
+           
+           
+                <ol class="quiz__list-question">
+                    <% questionDatas.forEach((questionData)=>{%>
+                        <li class="quiz__item-question"  > <%=  questionData['question_text'] %> ?
+                            <ul class="quiz__list-answer-obtion">
+                                <% answerObtionDatas.forEach((answerObtionData)=>{%>
+                                     <%if(questionData['question_number']==answerObtionData['question_id']){%>
+                                        <li data-question="<%=questionData['question_number']%>"> <%=answerObtionData['answer_option'] %> </li>
+                                    <%}%>
+                                <%})%>
+                            </ul>
+                        </li>
+                    <%})%>
+                </ol>
+         
+
+            
+        </div>
+       <div class="block_resultat">
+        <table class="resultat">
+            <tr>
+                <td>number question</td>
+                <td>results</td>
+            </tr>
+        </table>
+        
+        <button  class="btn btn--resultat " id="reset">start a new game</button>
+       </div>
+    
+
+        <button  class="btn btn--send disabled" disabled>resultat</button>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
